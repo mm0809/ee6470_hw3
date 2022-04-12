@@ -194,7 +194,9 @@ In the end of `Testbench.cpp` I add one unit of cimpute time and output time.
   sc_stop();
 ```
 
-total = 256 * 256 * 9 * 2 + 10 + 4 = 1179662
+total = 256 * 256 * 9 * 2 + 10 + 4 = 1179662 (cycles)
+If each cycles is 10ns, then total time is 11796620ns whis is close to 11141110ns(PIPE in HLS).
+SO, I can guess the compute time of the synthesis result of PIPLINE version is 10 cycles.
 
 ![](https://i.imgur.com/QJeRLGb.png)
 
