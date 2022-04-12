@@ -94,7 +94,14 @@ If we want a better throughput `DPA + PIPE` it the best one.
 
 ## Timing annotation of Gaussian Blur module(TLM)
 
-### how to count
+### annotate the latency
+
+The total time of HLS version is 30801910ns = 3080191 cycles.
+Total cycels = 256 * 256 * {9 * In_time + 1 * Out_time + Compute time} = 3080191
+From the code of HLS, we can know that the input and ouput cycles is 1, so we can get the **compute time is about 37 cycles**.
+
+
+### how to count pipeline verison
 ![](https://i.imgur.com/OrnsEBp.png)
 According to the graph, the total time of the module is **In * num + compute + out**.
 ### code
